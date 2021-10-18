@@ -124,12 +124,16 @@ def div_proprii(l):
             nr_div_lista.append(nr_divizori(x))
     return nr_div_lista
 
+def test_div_proprii():
+    assert div_proprii([25, 13, 26, 13, 19]) == [1, 13, 2, 13, 0]
+    assert  div_proprii([6, 8, 7]) == [2, 2, 0]
 
 def main():
     test_eliminare_dublicate()
     test_poz_crescatore()
     test_nr_divizori()
     test_suma_primelor_n_nr_pozitive()
+    test_div_proprii()
     l = []
     while True:
         print_menu()
